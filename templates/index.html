@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+  {% block content %}
+      <!-- Body for the products-->
+      <main>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white" style="background-image: url('../static/img/index/comingsoon.png');background-repeat: no-repeat; background-size: cover;">
+          <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-5 fw-normal text-white">COMING SOON</h1>
+            <a class="btn btn-info" href="#">Register Now</a>
+          </div>
+        </div>
+        <div class="position-relative overflow-hidden p-3 p-md-1 m-md-1 text-center bg-white" >
+          <div class="col-md-5 p-lg-1 mx-auto my-1">
+            <a class="btn btn-white" href="{% url 'products' 'all'%}">
+              <h1 class="display-4 fw-normal text-black">LAPTOPS</h1>
+            </a>
+          </div>
+        </div>
+        <div class="position-relative overflow-hidden p-3 p-md-10 m-md-10 text-center bg-white" style="z-index:0">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="{% url 'products' 'Gaming'%}">
+                  <img src="../static/img/index/gaming.jpg" class="d-block w-100" height="480" alt="Gaming laptops">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>GAMING LAPTOPS</h5>
+                    <p>Check Out our new gaming rigs.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="{% url 'products' 'Business'%}">
+                  <img src="../static/img/index/business.jpg" class="d-block w-100" height="480" alt="Business laptops">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>LAPTOPS for BUSINESS PURPOSE</h5>
+                    <p>New laptops for business purpose check it out.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="{% url 'products' 'Professional'%}">
+                  <img src="../static/img/index/professional.jpg" class="d-block w-100" height="480" alt="Professional laptops">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>PROFESSIONAL LAPTOPS</h5>
+                    <p>New laptop's with the latest gen hardware.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="{% url 'products' 'Student'%}">
+                  <img src="../static/img/index/student.jpg" class="d-block w-100" height="480" alt="Student laptops">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>LAPTOPS for STTUDENTS</h5>
+                    <p>For your young ones.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="position-relative overflow-hidden p-3 p-md-1 m-md-1 text-center bg-white" >
+          <div class="col-md-5 p-lg-1 mx-auto my-1">
+            <a class="btn btn-white" href="{% url 'products' 'all'%}">
+              <h1 class="display-4 fw-normal text-black">ACCESSORIES</h1>
+            </a>
+          </div>
+        </div>
+        <div class="position-relative overflow-hidden p-3 p-md-10 m-md-10 text-center bg-white" style="z-index:0">
+          <div id="carouselFadeExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="">
+                  <img src="../static/img/index/keyboard.jpg" class="d-block w-100" height="480" alt="Keyboards">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>KEYBOARDS</h5>
+                    <p>Check out the best suitable keyboard for yourself.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../static/img/index/mouse.jpg" class="d-block w-100" height="480" alt="Mouse">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>MOUSE</h5>
+                    <p>Check out the best suitable mouse for yourself.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../static/img/index/headphones.jpg" class="d-block w-100" height="480" alt="Headphones">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>HEADPHONES</h5>
+                    <p>Check out the best suitable headphones as per your liking.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../static/img/index/speakers.jpg" class="d-block w-100" height="480" alt="Speakers">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>SPEAKERS</h5>
+                    <p>Check out the best speakers for yourself.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFadeExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFadeExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </main>
+  {% endblock content %}

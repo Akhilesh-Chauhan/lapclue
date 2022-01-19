@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lapclue Signup</title>
+    <link rel="icon" type="image/x-icon" href="static/lapclue-logo.png" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="static/css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <form method="POST" id="signup-form">
+  {% csrf_token %}
+    <a href="http://127.0.0.1:8000/">
+        <img class="mb-4" src="static/lapclue-logo.png" alt="" width="72" height="57">
+    </a>
+    <h1 class="h3 mb-3 fw-normal">Signup</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" required name="username">
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="tel" class="form-control" id="floatingInput" required name="phoneno">
+      <label for="floatingInput">Phone No.</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" required name="email">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" required name="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" required name="password">
+      <label for="floatingPassword">Confirm Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox"  required value="agree-me"> I agree to your terms and conditions
+      </label>
+    </div>
+    <a href="http://127.0.0.1:8000/login" >I am already member</a>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+    <p class="mt-5 mb-3 text-muted">&copy; LAPCLUE 2021</p>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>

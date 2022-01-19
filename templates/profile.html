@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <!-- Body of the page-->
+        <div class="container position-relative px-4 px-lg-10">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                {% for p in profile %}
+                    <div class="col-md-10 col-lg-12 col-xl-12">
+                        <div class="post-heading">
+                            <p >
+                                <img src="{{p.image.url}}" width="200"/>
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Name : {{p.name}} 
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Phone No : {{p.phoneno}} 
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                E-Mail : {{p.email}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Gender : {{p.gender}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Date-of-Birth : {{p.dateofbirth}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Address : {{p.address}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                PINCODE : {{p.pincode}}
+                            </p>
+                            <a href="{% url 'editprofile' p.email %}">
+                                <button class="w-50 btn btn-info">Edit Profile</button>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock content %}
+  

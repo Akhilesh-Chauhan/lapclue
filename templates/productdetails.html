@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <!-- Body of the page-->
+        <div class="container position-relative px-4 px-lg-10">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                {% for d in details %}
+                    <div class="col-md-10 col-lg-12 col-xl-12">
+                        <div class="post-heading">
+                            <h3 class='post-name'>
+                                {{d.cname}} {{d.modelno}}
+                            </h3>
+                            <p >
+                                <img src="{{d.image.url}}" width="300"/>
+                            </p>
+                            <p class='post-text text-muted h6'>
+                                Price : ₹{{d.price}} 
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Category : {{d.category}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Processor : {{d.processor}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Graphics Card : {{d.graphics}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Memory : {{d.memory}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Storage : {{d.storage}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Display : {{d.screen}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                I/O Ports : {{d.ioports}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Dimensions : {{d.dimensions}}
+                            </p>
+                            <p class='post-text text-dark h6'>
+                                Discription : {{d.description}}
+                            </p>
+                            <a href="{% url 'cart' d.id %}">
+                                <button class="w-50 btn btn-warning">Add to cart</button>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock content %}

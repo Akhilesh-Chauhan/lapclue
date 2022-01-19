@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+  {% block content %}
+        <!-- Body of the page-->
+        <div class="container position-relative px-4 px-lg-10">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <p>Edit your profile !</p>
+                <form action="{% url 'editprofile' profile.email%}" method="POST" id="editprofile"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div>
+                        <label for="name">Name</label>
+                        <input class="form-control" required name="name" id="name" value="{{profile.name}}" type="text" placeholder="Enter your name..."/>
+                    </div>
+                    <div>
+                        <label for="email">E-Mail</label>
+                        <p>{{profile.email}}</p>
+                    </div>
+                    <div>
+                        <label for="image">Profile Picture</label>
+                        <img src="{{profile.image.url}}" width="300"/>
+                        <input class="form-control" name="image" id="image" type="file">
+                    </div>
+                    <div>
+                        <label for="phoneno">Phone No.</label>
+                        <input class="form-control" required name="phoneno" id="phoneno" value="{{profile.phoneno}}" type="tel" placeholder="Enter your phoneno..."/>
+                    </div>
+                    <div>
+                        <label for="dateofbirth">Date Of Birth</label>
+                        <input class="form-control" required name="dateofbirth" id="dateofbirth" value="{{profile.dateofbirth}}" type="tel" placeholder="Enter your date of birth..."/>
+                    </div>
+                    <div>
+                        <label for="gender">Gender</label>
+                        <input class="form-control" required name="gender" id="gender" value="{{profile.gender}}" type="text" placeholder="Enter your gender..."/>
+                    </div>
+                    <div>
+                        <label for="address">Address</label>
+                        <input class="form-control" required name="address" id="address" value="{{profile.address}}" type="text" placeholder="Enter your address..."/>
+                    </div>
+                    <div>
+                        <label for="pincode">Pincode</label>
+                        <input class="form-control" required name="pincode" id="pincode" value="{{profile.pincode}}" type="tel" placeholder="Enter your pincode..."/>
+                    </div>
+                    <br />
+                    <button class="btn btn-info " type="submit" id="">Edit</button>
+                </form>
+            </div>
+        </div>
+  {% endblock content %}

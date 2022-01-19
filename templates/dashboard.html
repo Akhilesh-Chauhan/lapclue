@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+  {% block content %}
+
+    <div class="container-fluid">
+      <div class="row">
+        <main class="col-md-9 ms-sm-auto col-lg-12 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-left pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-info">Share</button>
+                <button type="button" class="btn btn-sm btn-outline-info">Export</button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle">
+                <span data-feather="calendar"></span>
+                This week
+              </button>
+            </div>
+          </div>
+
+          <h2>Section title</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">O-ID</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Shipping Address</th>
+                        <th scope="col">Billing Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1,001</td>
+                        <td>Akhilesh</td>
+                        <td>LAPCLUE</td>
+                        <td>Vikasnagar</td>
+                        <td>Lapclue Shipping</td>
+                    </tr>
+                    <tr>
+                        <td>1,002</td>
+                        <td>Chauhan</td>
+                        <td>LAPCLUE</td>
+                        <td>Deharadun</td>
+                        <td>Lapclue Shipping</td>
+                    </tr>
+                    <tr>
+                        <td>1,003</td>
+                        <td>Saber</td>
+                        <td>LAPCLUE</td>
+                        <td>Luxmanpur</td>
+                        <td>Lapclue Shipping</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+  {% endblock content %}

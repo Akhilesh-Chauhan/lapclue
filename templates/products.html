@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+      <div class="container px-4 px-lg-12">
+        <div class="row gx-4 gx-lg-12 justify-content">
+          {% for product in prod %}
+            <div class="col-md-10 col-lg-12 col-xl-4 ">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <a href ="" class='btn btn_primary '>
+                    <h3 class='post-name'>
+                      {{product.cname}} {{product.modelno}}
+                    </h3>
+                  </a>
+                  <a href ="" class='btn btn_primary'>
+                    <img src="{{product.image.url}}" width="250"/>
+                  </a>
+                  <p class='post-text text-muted h6'>
+                    ₹{{product.price}} | {{product.category}}
+                  </p>
+                  <p class='post-text text-dark h6'>
+                    Processor : {{product.processor}}
+                  </p>
+                  <p class='post-text text-dark h6'>
+                    Graphics Card : {{product.graphics}}
+                  </p>
+                  <p class='post-text text-dark h6'>
+                    Memory : {{product.memory}}
+                  </p>
+                  <p class='post-text text-dark h6'>
+                    Storage : {{product.storage}}
+                  </p>
+                  <p class='post-text text-dark h6'>
+                    Display : {{product.screen}}
+                  </p>
+                  <a href="{% url 'cart' product.id %}" class="w-40 btn btn-warning">
+                    Add to cart
+                  </a>
+                  <a href ="{% url 'productdetails' product.id%}" class='btn btn-primary'>
+                    Detailed View
+                  </a>
+                </div>
+              </div>
+            </div>
+          {%  endfor  %}
+        </div>
+      </div>
+
+  {% endblock content %}
